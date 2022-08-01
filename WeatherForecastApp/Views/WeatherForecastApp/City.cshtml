@@ -1,0 +1,39 @@
+﻿@model WeatherForecastApp.Models.WeatherForecastAppModels.City
+
+@{
+    //Layout = null;
+    ViewData["Title"] = "City";
+}
+
+<div class="container">
+
+    <div class="form-group col-md-offset-3 col-md-5">
+
+        <h2>Forecast for the selected city</h2>
+
+        <label style="font-family: Arial">City Name :</label>
+        <span class="badge">@Model.Name</span>
+        <br />
+
+        <label style="font-family: Arial">Temparature :</label>
+        <span class="badge">@Model.Temp °C</span>
+        <br />
+
+        <label style="font-family: Arial">Humidity :</label>
+        <span class="badge">@Model.Humidity %</span>
+        <br />
+
+        <label style="font-family: Arial">Pressure :</label>
+        <span class="badge">@Model.Pressure Hpa</span>
+        <br />
+
+        <label style="font-family: Arial">Wind :</label>
+        <span class="badge">@Model.Wind Km/h</span>
+        <br />
+
+        <label style="font-family: Arial">Weather :</label>
+        <span class="badge">@Model.Weather</span>
+
+    </div>
+
+</div>

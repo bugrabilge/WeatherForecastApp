@@ -1,0 +1,27 @@
+﻿@model WeatherForecastApp.Models.WeatherForecastAppModels.SearchCity
+
+@{
+    ViewData["Title"] = "SearchCity";
+}
+
+<div class="container">
+
+    @using (Html.BeginForm("SearchCity", "WeatherForecastApp", FormMethod.Post))
+    {
+        <div class="container">
+            <div class="form-group col-md-offset-3 col-md-10">
+                <h2>Search the forecast in a city</h2>
+                City Name :
+                <label style="font-family: Arial"></label>
+                @Html.TextBoxFor(m => m.CityName)
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-group col-md-offset-3 col-md-10">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+
+</div>
